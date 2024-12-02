@@ -1,12 +1,12 @@
-# flight-reservation-system
-
-# Uçuş Rezervasyon Sistemi
+# Flight-reservation-system
 
 Bu program, bir uçuş rezervasyon sistemini simüle etmektedir. Kullanıcılar uçuşları görüntüleyebilir, rezervasyon yapabilir ve mevcut rezervasyonlarını yönetebilir. Ayrıca admin kullanıcıları uçuşlar, rezervasyonlar ve kullanıcılar üzerinde yönetim işlemleri gerçekleştirebilir.
 
 ## Projeye Genel Bakış
 
 Bu sistem, Spring Boot kullanılarak geliştirilmiştir ve MySQL veritabanı kullanır. Ayrıca, Docker ile konteynerleştirilmiştir, bu sayede tüm bağımlılıklar izole edilmiş bir ortamda çalıştırılabilir.
+
+https://github.com/erbilcolak90/flight-reservation-system
 
 ## Başlangıç
 
