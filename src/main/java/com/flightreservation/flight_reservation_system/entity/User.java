@@ -1,6 +1,7 @@
 package com.flightreservation.flight_reservation_system.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "users")
@@ -23,16 +24,21 @@ public class User extends BaseEntity {
     @Column(name = "password")
     private String password;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
+    private Role role;
+
     public User() {
         super();
     }
 
-    public User(String name, String surname, String email, String password) {
+    public User(String name, String surname, String email, String password, Role role) {
         super();
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
+        this.role = role;
     }
 
     public Long getId() {
@@ -73,5 +79,13 @@ public class User extends BaseEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

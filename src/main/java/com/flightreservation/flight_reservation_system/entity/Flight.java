@@ -25,6 +25,7 @@ public class Flight extends BaseEntity {
     private FlightStatusEnums status;
 
     @Column(name = "flight_date")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date flightDate;
 
     public Flight() {

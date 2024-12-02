@@ -18,10 +18,10 @@ public class Seat extends BaseEntity {
     private Flight flight;
 
     @Column(name = "seat_number")
-    private Integer seatNumber;
+    private int seatNumber;
 
     @Column(name = "price")
-    private Double price;
+    private double price;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
