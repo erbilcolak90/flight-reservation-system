@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    image: flight_reservation_system-image:latest
+    container_name: flight_reservation_app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/flight_reservation?allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQL8Dialect
+      SPRING_JPA_SHOW_SQL: true
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: true
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - flight_network
+    restart: always
+
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: flight_reservation
+    ports:
+      - "3306:3306"
+    networks:
+      - flight_network
+    restart: always
+
+networks:
+  flight_network:
+    driver: bridge
