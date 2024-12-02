@@ -2,8 +2,6 @@ package com.flightreservation.flight_reservation_system.entity;
 
 import javax.persistence.*;
 
-import javax.persistence.*;
-
 @Entity
 @Table(name = "orders")
 public class Order extends BaseEntity {

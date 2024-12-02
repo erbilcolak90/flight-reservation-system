@@ -3,7 +3,6 @@ package com.flightreservation.flight_reservation_system.entity;
 import com.flightreservation.flight_reservation_system.enums.ReservationStatusEnums;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "reservations")

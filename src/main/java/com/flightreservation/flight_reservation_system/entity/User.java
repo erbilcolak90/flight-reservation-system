@@ -1,7 +1,6 @@
 package com.flightreservation.flight_reservation_system.entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "users")
